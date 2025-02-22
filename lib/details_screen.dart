@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
-  DetailsScreen({super.key});
+  
+  final String title;
+  final String ingredients;
+  final String instructions;
 
-  final reciple_01 = GlobalKey();
-  final reciple_02 = GlobalKey();
-  final reciple_03 = GlobalKey();
-
+  const DetailsScreen({
+  required this.title, 
+  required this.ingredients, 
+  required this.instructions, 
+  super.key,});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Recipe Page")),
-      body: SingleChildScrollView(
-        child: Center(
+      body: Center(
+        child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -23,29 +27,11 @@ class DetailsScreen extends StatelessWidget {
                   Navigator.pushNamed(context, '/homepage', );
                 },
               ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-                child: Container(
-                  width: double.infinity,
-                  height: 300,
-                  color: Colors.amberAccent
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-                child: Container(
-                  width: double.infinity,
-                  height: 300,
-                  color: Colors.greenAccent
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-                child: Container(
-                  width: double.infinity,
-                  height: 300,
-                  color: Colors.blueAccent
-                ),
+              Container(
+                width: double.infinity,
+                height: 600,
+                color: Colors.amberAccent,
+                child: Text("Title: $title \n Ingredients: $ingredients \n Instructions: $ingredients"),
               ),
             ],
           ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
-import 'details_screen.dart';
+// import 'details_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       home: const Homescreen(),
       routes: {
         '/homepage':(context) => const Homescreen(),
-        '/details':(context) => DetailsScreen()
+
       },
     );
   }
