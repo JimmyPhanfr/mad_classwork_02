@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       home: const Homescreen(),
       routes: {
         '/homepage':(context) => const Homescreen(),
-        '/details':(context) => const DetailsScreen()
+        '/details':(context) => DetailsScreen()
       },
     );
   }

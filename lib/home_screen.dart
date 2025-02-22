@@ -11,18 +11,12 @@ class Homescreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            ElevatedButton(
-             child: const Text("Go to Recipes"),
-              onPressed: () {
-                Navigator.pushNamed(context, '/details');
-              },
-            ),
             ListView(
               shrinkWrap: true,
               children: [
                 ListTile(
                   leading: Icon(Icons.circle),
-                  title: Text('Recipe1'),
+                  title: Text('Recipe 1'),
                   subtitle: Text('desc'),
                   onTap: () {
                     Navigator.pushNamed(context, '/details');
@@ -32,23 +26,23 @@ class Homescreen extends StatelessWidget {
                 ),
                 ListTile(
                   leading: Icon(Icons.circle),
-                  title: Text('Recipe2'),
+                  title: Text('Recipe 2'),
                   subtitle: Text('desc'),
                   onTap: () {
                     Navigator.pushNamed(context, '/details');
                   },
-                  trailing: Icon(Icons.navigate_next),
-                  tileColor: Colors.amberAccent,
+                  trailing: Icon(Icons.navigate_next), 
+                  tileColor: Colors.greenAccent,
                 ),
                 ListTile(
                   leading: Icon(Icons.circle),
-                  title: Text('Recipe3'),
+                  title: Text('Recipe 3'),
                   subtitle: Text('desc'),
                   onTap: () {
                     Navigator.pushNamed(context, '/details');
                   },
                   trailing: Icon(Icons.navigate_next),
-                  tileColor: Colors.amberAccent,
+                  tileColor: Colors.blueAccent,
                 ),
               ],
             ),
