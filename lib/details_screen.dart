@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
 
-class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+class DetailsScreen extends StatelessWidget {
+  const DetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Homepage")),
+      appBar: AppBar(title: const Text("Details Recipe Page")),
       body: Center(
-        child: ElevatedButton(
-          child: const Text("Go to Recipes"),
-          onPressed: () {
-
-          },
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            ElevatedButton(
+             child: const Text('Return to Homepage'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/homepage');
+              },
+            ),
+          ],
         ),
       ),
     );
